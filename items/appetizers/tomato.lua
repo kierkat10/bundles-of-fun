@@ -1,12 +1,12 @@
 -- SMODS.Joker {
---     key = "durian",
---     name = "Durian",
+--     key = "tomato",
+--     name = "Tomato",
 --     config = {
 --         extra = {
             
 --         }
 --     },
---     pos = { x = 6, y = 0 },
+--     pos = { x = 4, y = 0 },
 --     cost = 1,
 --     rarity = 1,
 --     blueprint_compat = true,

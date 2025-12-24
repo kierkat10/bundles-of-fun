@@ -7,7 +7,7 @@ SMODS.Joker {
             balance_mod = 20
         }
     },
-    pos = { x = 4, y = 1 },
+    pos = { x = 9, y = 0 },
     cost = 6,
     rarity = 2,
     blueprint_compat = true,
