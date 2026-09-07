@@ -434,7 +434,7 @@ function Game:start_run(arg)
     G.GAME.bof_vouchers_redeemed_this_ante = 0
     G.GAME.bof_current_ante = 1
     G.GAME.bof_octopus_triggered = nil
-    G.GAME.bof_nuwa_fuxi_trigger = nil
+    G.GAME.bof_payne_trigger = nil
     G.GAME.bof_nerd_guarantee_rare = nil
     G.GAME.bof_tiny_active = nil
     G.GAME.bof_tiny_scaled_ante = nil
@@ -458,7 +458,7 @@ local original_game_start_round = Game.start_round
 function Game:start_round()
     G.GAME.bof_octopus_claimed_fish = nil
     G.GAME.bof_octopus_triggered = nil
-    G.GAME.bof_nuwa_fuxi_trigger = nil
+    G.GAME.bof_payne_trigger = nil
     return original_game_start_round and original_game_start_round(self)
 end
 
@@ -1529,8 +1529,8 @@ function SMODS.destroy_cards(card, args)
             G.E_MANAGER:add_event(Event({
                 func = function()
                     G.GAME.bof_small_fish_expired = (G.GAME.bof_small_fish_expired or 0) + 1
-                    G.GAME.bof_nuwa_fuxi_trigger = G.GAME.bof_nuwa_fuxi_trigger or {}
-                    G.GAME.bof_nuwa_fuxi_trigger.tarot = true
+                    G.GAME.bof_payne_trigger = G.GAME.bof_payne_trigger or {}
+                    G.GAME.bof_payne_trigger.tarot = true
                     return true
                 end
             }))
@@ -1539,8 +1539,8 @@ function SMODS.destroy_cards(card, args)
             G.E_MANAGER:add_event(Event({
                 func = function()
                     G.GAME.bof_big_fish_expired = (G.GAME.bof_big_fish_expired or 0) + 1
-                    G.GAME.bof_nuwa_fuxi_trigger = G.GAME.bof_nuwa_fuxi_trigger or {}
-                    G.GAME.bof_nuwa_fuxi_trigger.spectral = true
+                    G.GAME.bof_payne_trigger = G.GAME.bof_payne_trigger or {}
+                    G.GAME.bof_payne_trigger.spectral = true
                     return true
                 end
             }))
