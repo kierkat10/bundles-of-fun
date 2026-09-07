@@ -1,0 +1,36 @@
+[manifest]
+version = "1.0.0"
+
+[[patches]]
+[patches.pattern]
+target = '=[SMODS _ "src/utils.lua"]'
+pattern = '''
+if SMODS.check_looping_context(_card) then
+    goto skip
+end
+SMODS.current_evaluated_object = _card
+local eval, post = eval_card(_card, context)
+'''
+position = 'at'
+match_indent = true
+payload = '''
+-- bof patch
+if SMODS.check_looping_context(_card) then
+    goto skip
+end
+if context.individual and context.cardarea == G.play and _card.config.center_key ~= "j_bof_core" then
+    local suppress = false
+    for _, core in ipairs(SMODS.find_card("j_bof_core")) do
+        if core.ability.extra.count > 0 then
+            suppress = true
+            break
+        end
+    end
+    if suppress then
+        goto skip
+    end
+end
+SMODS.current_evaluated_object = _card
+local eval, post = eval_card(_card, context)
+-- patch end
+'''

@@ -57,7 +57,12 @@ BundlesOfFun.Joker {
                 message = card.ability.extra.count .. ""
             }
         end
-        if context.bof_chips_check and card.ability.extra.count > 0 then
+        if context.modify_scoring_hand and not context.blueprint then
+            return {
+                add_to_hand = true
+            }
+        end
+        if context.bof_chips_check then
             return {
                 suppress = true
             }

@@ -14,7 +14,7 @@ BundlesOfFun.Joker {
         info_queue[#info_queue + 1] = { key = "e_negative_consumable", set = "Edition", config = { extra = 1 } }
     end,
     calculate = function(self, card, context)
-        if G.GAME and G.GAME.bof_payne_trigger then
+        if BOF.nc(G.GAME, "bof_payne_trigger") then
             if G.GAME.bof_payne_trigger.tarot then
                 G.GAME.bof_payne_trigger.tarot = nil
                 if #G.consumeables.cards + G.GAME.consumeable_buffer < G.consumeables.config.card_limit + 1 then

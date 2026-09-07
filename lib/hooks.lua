@@ -94,6 +94,7 @@ function G.UIDEF.use_and_sell_buttons(card)
 end
 
 -- apple core logic
+-- the rest of the suppress is done in lovely/appetizers.toml
 local getchip = Card.get_chip_bonus
 function Card:get_chip_bonus()
 	local flags = {}
