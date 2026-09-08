@@ -7,7 +7,7 @@ BundlesOfFun.Joker {
     attributes = { "passive", "planet", "space" },
     cost = 7,
     rarity = 2,
-    blueprint_compat = false,
+    blueprint_compat = true,
     atlas = "joker",
     calculate = function(self, card, context)
         if
