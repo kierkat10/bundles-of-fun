@@ -794,9 +794,8 @@ return {
             j_bof_manqian = {
                 name = "Manqian",
                 text = {
-                    "{C:white,X:mult}Multiply{C:mult} Mult{} by",
-                    "{C:attention}level{} of most played",
-                    "{C:attention}poker hand{} before scoring",
+                    "{C:white,X:mult}Multiply{C:mult} Mult{} by {C:attention}level{} of",
+                    "most played {C:attention}poker hand",
                     "{C:inactive}(Currently {C:attention}#1#{C:inactive} at {V:1}lvl.#2#{C:inactive})"
                 },
                 unlock = {
