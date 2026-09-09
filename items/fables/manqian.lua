@@ -31,7 +31,7 @@ BundlesOfFun.Joker {
         }
     end,
     calculate = function(self, card, context)
-        if context.initial_scoring_step then
+        if context.joker_main then
             local most_played = 0
             local most_played_hand = "High Card"
             for hand, data in pairs(G.GAME.hands) do
@@ -42,7 +42,7 @@ BundlesOfFun.Joker {
             end
             local hand_level = most_played_hand ~= nil and G.GAME.hands[most_played_hand].level or 0
             return {
-                Xmult = hand_level
+                xmult = hand_level
             }
         end
     end
