@@ -13,7 +13,7 @@ BundlesOfFun.Joker {
     cost = 2,
     rarity = 1,
     blueprint_compat = true,
-    atlas = BundlesOfFun.config.evil_dih and "evil_dih" or "joker",
+    atlas = "joker",
     loc_vars = function(self, info_queue, card)
         return {
             key = BundlesOfFun.config.evil_dih and "j_bof_gucci_morty" or "j_bof_phony",
